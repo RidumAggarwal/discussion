@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discussion Portal Login Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="./loginstyle.css" />
+    <link rel="icon" type="image/x-icon" href="/favicon.png">
+</head>
+<body>
+    <header>
+        <nav id="nav-bar">
+            <h1>Discussion Portal</h1>
+            <ul id="nav-ul">
+                <li class="nav-option" id="sign-in-btn">Sign In</li>
+                <li class="nav-option" id="sign-up-btn">Sign Up</li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div>
+            <div id="signin-form">
+                <h2>Login Page</h2>
+                <input type="email" id="email" placeholder="Enter your email id" />
+                <div class="pass-div"> 
+                    <input type="password" id="password" class="pass" placeholder="Enter your password" />
+                    <i id="toggle-login-password" class="fas fa-eye password"></i>
+                </div>
+                <button id="login-btn" type="button">Login</button>
+            </div>
+            <form id="signup-form">
+                <h2>Sign Up Page</h2>
+                <input type="text" id="name" placeholder="Enter your Name" required />
+                <input type="email" id="suemail" placeholder="Enter your email id" required />
+                <div class="pass-div"> 
+                    <input type="password" id="supassword" class="pass" placeholder="Enter your password" required />
+                    <i id="toggle-signup-password" class="fas fa-eye password"></i>
+                </div>
+                <button id="signup-btn" type="submit">Sign Up</button>
+            </form>
+        </div>
+    </main>
+    <footer>&copy; 2024 Ridum Aggarwal</footer>
+    <script src="loginscript.js"></script>
+</body>
+</html>

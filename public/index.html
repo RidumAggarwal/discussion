@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="icon" type="image/x-icon" href="/favicon.png">
+    </head>
+    <body>
+        <header>
+            <div id="title-div">
+                <div id="title">Discussion Portal</div>
+                <div id="search-div">
+                    <button type="button" id="add-ques" class="smt-btn">Add New
+                        Question</button>
+                    <input type="text" id="search" placeholder="Search...">
+                </div>
+            </div>
+
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div id="side-div">
+            <ul id="user-info">
+                <li  class="nav-li">
+                    <img src="/logo.png" id="user-img"  alt="user"/>
+                    <p id="usname">Welcome, User</p>
+                </li>
+                <li id="usemail" class="nav-li">abc@gmail.com</li>
+            </ul>
+            <button type="button" id="logout-btn" class="smt-btn">Logout</button>
+                </div>
+
+        </header>
+        <main>
+            <section id="list-section">
+                <h2 id="head-ques">No Questions available</h2>
+                <ul id="question-list">
+
+                </ul>
+            </section>
+            <section id="form-section" class="form-section">
+
+                <div id="form-container">
+                    <div id="form">
+                        <h1>Welcome To Discussion Portal.</h1>
+                        <p>Enter a subject and question to get started.</p>
+                        <input type="text" id="subject"
+                            placeholder="Enter Subject...">
+                        <textarea id="question"
+                            placeholder="Enter Question..."></textarea>
+                        <button id="submit" type="submit"
+                            class="smt-btn">Submit</button>
+                    </div></div>
+            </section>
+            <section id="response-section">
+                <h1>Question</h1>
+                <p id="writer"></p><p id="writer-email"></p>
+                <div id="question-clicked"></div>
+                <button type="button" id="resolve-button"
+                    class="smt-btn">Resolve</button>
+
+                <h1>Responses</h1>
+                <ul id="response-list">
+
+                </ul>
+                <h1>Add Response</h1>
+                <!-- <input type="text" id="name" placeholder="Enter Name..."> -->
+                <textarea placeholder="Enter Response..."
+                    id="response"></textarea>
+                <button type="button" id="add-response-button"
+                    class="smt-btn">Add Response</button>
+            </section>
+        </main>
+        <footer></footer>
+        <script src="script.js"></script>
+    </body>
+</html>

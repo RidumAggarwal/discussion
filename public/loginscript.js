@@ -78,7 +78,9 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
     
-    logIndetails.addEventListener("click", () => {
+    logIndetails.addEventListener("click", login);
+    password.addEventListener("keypress", login);
+    function login(){
         let loginDetails = {
             email: email.value.trim(),
             password: password.value.trim()
@@ -98,7 +100,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 alert("Error occurred at server side");
             }
         };
-    });
+    }
     
     function validateEmail(email) {
         const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;

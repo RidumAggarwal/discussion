@@ -41,7 +41,22 @@ document.addEventListener("DOMContentLoaded", function () {
         togglePasswordVisibility(supassword, toggleSignupPassword);
     });
     
-    signUpdetails.addEventListener("click", () => {
+    signUpdetails.addEventListener("click", signUp);
+    supassword.addEventListener("keypress", e =>{
+    if(e.key === 'Enter'){
+        e.preventDefault();
+        signUp();
+    }
+    });
+    
+    logIndetails.addEventListener("click", login);
+    password.addEventListener("keypress", e =>{
+    if(e.key === 'Enter'){
+        e.preventDefault();
+        login();
+    }
+    });
+    function signUp(){
         let emailValue = suemail.value.trim();
         let nameValue = suname.value.trim();
         let passwordValue = supassword.value.trim();
@@ -76,15 +91,7 @@ document.addEventListener("DOMContentLoaded", function () {
         } else {
             alert("Please fill all the fields");
         }
-    });
-    
-    logIndetails.addEventListener("click", login);
-    password.addEventListener("keypress", e =>{
-    if(e.key === 'Enter'){
-        e.preventDefault();
-        login();
     }
-    });
     function login(){
         let loginDetails = {
             email: email.value.trim(),

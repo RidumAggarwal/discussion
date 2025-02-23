@@ -79,7 +79,10 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     
     logIndetails.addEventListener("click", login);
-    password.addEventListener("keypress", login);
+    password.addEventListener("keypress", (e)=>{
+    if(e.key==="Enter"){
+        login();
+    });
     function login(){
         let loginDetails = {
             email: email.value.trim(),

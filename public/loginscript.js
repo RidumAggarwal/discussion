@@ -79,8 +79,9 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     
     logIndetails.addEventListener("click", login);
-    password.addEventListener("keypress", (e)=>{
-    if(e.key==="Enter"){
+    password.addEventListener("keypress", e =>{
+    if(e.key === 'Enter'){
+        e.preventDefault();
         login();
     });
     function login(){
@@ -98,7 +99,7 @@ document.addEventListener("DOMContentLoaded", function () {
             if (xhr.status === 200) {
                 window.location.href = "/";
             } else if (xhr.status === 409) {
-                alert("Password is incorrect");
+                alert("Email or Password is incorrect");
             } else {
                 alert("Error occurred at server side");
             }

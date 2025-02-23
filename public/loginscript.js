@@ -83,6 +83,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if(e.key === 'Enter'){
         e.preventDefault();
         login();
+    }
     });
     function login(){
         let loginDetails = {
